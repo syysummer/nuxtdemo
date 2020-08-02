@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import axios from "axios";
+import request from "~/utils/api.js";
 export default {
    data() {
       return {
@@ -25,11 +25,9 @@ export default {
         colors: ['#99A9BF', '#F7BA2A', '#FF9900']  // 等同于 { 2: '#99A9BF', 4: { value: '#F7BA2A', excluded: true }, 5: '#FF9900' }
       }
     },
-    asyncData() {
-    axios.get('https://api.sunofbeach.net/shop/discovery/categories').then(result => {
-      console.log(result.data.data);
-    })
-    }
+   async asyncData() {
+     var data = request.getCategories();
+   }
 }
 </script>
 

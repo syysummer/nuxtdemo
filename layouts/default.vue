@@ -6,7 +6,7 @@
         阳光沙滩-券场
         </div>
         <ul class="header-nav">
-          <li>券场</li>
+          <li class="active">券场</li>
           <li>发现</li>
           <li>特惠</li>
         </ul>
@@ -134,13 +134,16 @@ ul{
   padding: 0 15px;
   cursor: pointer;
 }
+.header-nav li.active{
+  background: #ECECEC;
+}
 .header-search-btn{
   margin-left: 15px;
 }
 .footer{
   width: 100%;
   height: 100px;
-  background: #8f2c2c;
+  background: #a33f3f;
 }
 .footer-content{
   width: 70%;
